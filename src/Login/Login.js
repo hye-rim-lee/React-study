@@ -8,14 +8,13 @@ import logo2 from '../assets/heart.jpg';
 import Typography from '@material-ui/core/Typography';
 
 /*React의 ui framwork인 material-ui를 사용
-https://material-ui.com/
+https://material-ui.com/ 이걸로 인풋이랑 버튼효과 넣는거
 
-Margin은 Object와 화면과의 여백(외부여백)을 말하며
+Margin은 Object와 화면과의 여백(외부여백)을 말하며,
 Padding은 Object내의 내부여백을 의미
-
 theme.spacing(number) 숫자1당 8px를 의미
-일반숫자로 대중없이 적기보다는 규칙이 있는편이 
-더 유지보수성은 물론 가독성 또한 편리
+일반숫자로 대중없이 적기보다는 규칙 있는게
+더 유지보수성은 물론 가독성 또한 편리하다고 합니다
 */
 
 const useStyles = makeStyles((theme) => ({
@@ -54,14 +53,14 @@ const Login = () => {
             <Container className={classes.root}>
                 <img alt="logo" src={logo} className={classes.logo} />
                 <Typography align="center" className={classes.logoTitle}>
-                    회원 로그인
+                    로그인 페이지
                 </Typography>
             </Container>
-            
+
             <Container>
                 <TextField
                     className={classes.textField1} //만들어 둔 스타일을 적용
-                    label="아이디" //양식 입력창을 설명함
+                    label="ID" //양식 입력창을 설명함
                     variant="filled" //Box 테두리
                     fullWidth //container의 전체 넓이를 차지
                     required //필수값체크
@@ -69,7 +68,7 @@ const Login = () => {
                 <TextField
                     className={classes.textField2}
                     margin="normal" //아이디와 비밀번호 사이의 간격을 줌
-                    label="비밀번호"
+                    label="PASSWORD"
                     variant="filled"
                     fullWidth
                     required
@@ -78,7 +77,7 @@ const Login = () => {
                     className={classes.bottom}
                     fullWidth
                     variant="contained"
-                    color="primary" //primary
+                    color="primary" 
                     size="large"
                 >
                     로그인
@@ -90,6 +89,21 @@ const Login = () => {
                     size="large"
                 >
                     회원가입
+                </Button>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    margin=""
+                >
+                    아이디 찾기
+                </Button>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                >
+                    비밀번호 찾기
                 </Button>
             </Container>
         </div>
