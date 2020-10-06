@@ -2,13 +2,17 @@ import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import NotFound from './NotFound/NotFound';
 import Login from './Login/Login';
+import Home from './Home/Home';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Switch>
+
                 <Route exact path="/" component={Login} />
+                <Route path = '/login' component = {Login}/>
                 <Route component={NotFound} />
+
             </Switch>
         </BrowserRouter>
     );
